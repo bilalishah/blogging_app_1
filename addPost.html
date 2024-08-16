@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+
+  <title>Post Add</title>
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <div class="navbar bg-primary">
+    <div class="flex-1 px-2 lg:flex-none">
+      <a href="./index.html" class="text-lg font-bold text-white">Buy / Sells Corner</a>
+    </div>
+    <div class="flex flex-1 justify-end px-2">
+      <div id="nav_option_show" class="flex items-stretch">
+        <!-- btn came from js file -->
+      </div>
+    </div>
+  </div>
+  <!-- Navbar end -->
+
+  <!-- Form start -->
+  <div class="flex justify-center mt-10">
+    <div class="card w-full max-w-md shadow-2xl bg-base-100">
+      <div class="card-body">
+        <h2 class="card-title">Add Your Product</h2>
+
+        <!-- Upload Product Photo -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Upload Product Photo</span>
+          </label>
+          <label for="upload-photo" class="flex bg-primary justify-center items-center border-2 border-dashed border-white rounded-lg h-48 cursor-pointer">
+            <svg id="svg-icon" xmlns="http://www.w3.org/2000/svg" width="200" height="192" viewBox="0 0 200 192" fill="none">
+              <path d="M8 56C8 38.3269 22.3269 24 40 24H120C137.673 24 152 38.3269 152 56V136C152 153.673 137.673 168 120 168H40C22.3269 168 8 153.673 8 136V56Z" stroke="white" stroke-width="16"/>
+              <path d="M48 96H80M80 96H112M80 96V64M80 96L80 128" stroke="white" stroke-width="16" stroke-linecap="round"/>
+            </svg>
+            <img id="uploaded-image" class="hidden h-full w-auto" />
+            <input id="upload-photo" type="file" class="hidden" accept="image/*" />
+          </label>
+        </div>
+
+        <!-- Product Title -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Product Title</span>
+          </label>
+          <input id="product-title" type="text" placeholder="Enter Product Title" class="input input-bordered w-full" />
+        </div>
+
+        <!-- Product Description -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Product Description</span>
+          </label>
+          <textarea id="product-description" placeholder="Enter Product Description" class="textarea textarea-bordered w-full"></textarea>
+        </div>
+
+        <!-- Enter Price -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Enter Price</span>
+          </label>
+          <input id="product-price" type="number" placeholder="Enter Price" class="input input-bordered w-full" />
+        </div>
+
+        <!-- Enter Your Name -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Enter Your Name</span>
+          </label>
+          <input id="user-name" type="text" placeholder="Enter Your Name" class="input input-bordered w-full" />
+        </div>
+
+        <!-- Enter Your Number -->
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Enter Your Number</span>
+          </label>
+          <input id="user-number" type="text" placeholder="Enter Your Number" class="input input-bordered w-full" />
+        </div>
+
+        <!-- Post Now Button -->
+        <div class="form-control mt-6">
+          <button id="Post_Now_btn" class="btn btn-primary">
+            <span id="Post_Now_text">Post Now</span>
+            <span id="loading-spinner" class="loading loading-bars loading-lg hidden"></span>
+       
+          </button>
+          <span id="loading-spinner" class="loading loading-bars loading-lg hidden"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Form end -->
+
+</body>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+<script type="module" src="./script/addPost.js"></script>
+
+</html>
